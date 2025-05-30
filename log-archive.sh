@@ -4,12 +4,19 @@ set -e
 
 # Display help
 show_help() {
-  echo "log-archive - simple archive tool"
-  echo -e "\nUsage:"
-  echo "  log-archive [-h] SOURCE [TARGET_DIR]"
-  echo -e "\noptional arguments:"
-  echo "  TARGET_DIR   target directory for archive"
-  echo -e "  -h, --help   show this help message and exit\n"
+cat << EOF
+log-archive - simple archive tool
+
+Usage:
+  log-archive [-h] SOURCE [TARGET_DIR]
+
+Arguments:
+  SOURCE       source file/directory to archive
+
+Optional arguments:
+  TARGET_DIR   target directory for archive (default: current directory)
+  -h, --help   show this help message and exit
+EOF
 }
 
 # Check source directory is not empty
@@ -32,10 +39,11 @@ else
   TARGET_DIR="./"
 fi
 
-SOURCE_DIR="$1"
+SOURCE="$1"
 DATETIME=$(date +"%Y%m%d_%H%M%S")
 ARCHIVE_PATH="${TARGET_DIR%/}/logs_archive_$DATETIME.tar.gz"
 
-tar cfz "$ARCHIVE_PATH" "$SOURCE_DIR"
+echo "Archiving ${SOURCE} to ${ARCHIVE_PATH}"
+tar cfz "$ARCHIVE_PATH" "$SOURCE"
 
 echo "Successfully archived to $ARCHIVE_PATH"

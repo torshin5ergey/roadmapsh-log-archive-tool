@@ -3,7 +3,7 @@
 set -e
 
 if [ -z "$1" ]; then
-  echo "Please, provide path to archived directory."
+  echo "Please, provide path to directory for archiving."
   exit 1
 fi
 

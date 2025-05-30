@@ -12,6 +12,7 @@ This is my solution to the [Simmple Monitoring project](https://roadmap.sh/proje
 ## References
 
 - [GNU tar: an archiver tool](https://www.gnu.org/software/tar/manual/tar.html)
+- [man tar](https://www.man7.org/linux/man-pages/man1/tar.1.html)
 
 ## Project Requirements
 

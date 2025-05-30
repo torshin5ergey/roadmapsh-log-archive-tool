@@ -16,9 +16,9 @@ This is my solution to the [Simmple Monitoring project](https://roadmap.sh/proje
 
 ## Project Requirements
 
-- [ ] Create script `log-archive` accept the log directory as an argument, compress the logs, and store them in a new directory
-- [ ] The tool should compress the logs in a tar.gz file and store them in a new directory
-- [ ] The tool should log the date and time of the archive to a file `logs_archive_20240816_100648.tar.gz`
+- [x] Create script `log-archive` accept the log directory as an argument, compress the logs, and store them in a new directory
+- [x] The tool should compress the logs in a tar.gz file and store them in a new directory
+- [x] The tool should log the date and time of the archive to a file `logs_archive_20240816_100648.tar.gz`
 
 ## Prerequisites
 

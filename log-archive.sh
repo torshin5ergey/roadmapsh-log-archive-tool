@@ -7,10 +7,10 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-DIR=$1
+SOURCE_DIR=$1
 DATETIME=$(date +"%Y%m%d_%H%M%S")
 ARCHIVE_NAME="logs_archive_$DATETIME.tar.gz"
 
-tar cfz $ARCHIVE_NAME $1
+tar cfz $ARCHIVE_NAME $SOURCE_DIR
 
 echo "Archived to $ARCHIVE_NAME"

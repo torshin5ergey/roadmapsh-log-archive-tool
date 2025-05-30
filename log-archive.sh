@@ -16,8 +16,8 @@ fi
 
 SOURCE_DIR=$1
 DATETIME=$(date +"%Y%m%d_%H%M%S")
-ARCHIVE_NAME="logs_archive_$DATETIME.tar.gz"
+ARCHIVE_PATH=${TARGET_DIR%/}/"logs_archive_$DATETIME.tar.gz"
 
-tar cfz $TARGET_DIR/$ARCHIVE_NAME $SOURCE_DIR
+tar cfz $ARCHIVE_PATH $SOURCE_DIR
 
-echo "Archived to $TARGET_DIR/$ARCHIVE_NAME"
+echo "Successfully archived to $ARCHIVE_PATH"

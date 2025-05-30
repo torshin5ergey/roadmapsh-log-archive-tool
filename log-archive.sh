@@ -8,7 +8,8 @@ if [ -z "$1" ]; then
 fi
 
 DIR=$1
-ARCHIVE_NAME="logs_archive.tar.gz"
+DATETIME=$(date +"%Y%m%d_%H%M%S")
+ARCHIVE_NAME="logs_archive_$DATETIME.tar.gz"
 
 tar cfz $ARCHIVE_NAME $1
 

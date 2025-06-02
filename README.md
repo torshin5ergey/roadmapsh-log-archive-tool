@@ -1,12 +1,14 @@
-# 🚦 Log Archive Tool Project for [roadmap.sh](https://roadmap.sh/)
+# 🗃️ Log Archive Tool Project for [roadmap.sh](https://roadmap.sh/)
 
-This is my solution to the [Simmple Monitoring project](https://roadmap.sh/projects/simple-monitoring-dashboard) in the [DevOps roadmap](https://roadmap.sh/devops) from [roadmap.sh](https://roadmap.sh/)
+This is my solution to the [Log Archive Tool project](https://roadmap.sh/projects/log-archive-tool) in the [DevOps roadmap](https://roadmap.sh/devops) from [roadmap.sh](https://roadmap.sh/)
 
 **Table of Contents**
 - [References](#references)
 - [Project Requirements](#project-requirements)
 - [Prerequisites](#prerequisites)
 - [How To Use](#how-to-use)
+  - [Usage](#usage)
+  - [Examples](#examples)
 - [Author](#author)
 
 ## References
@@ -23,8 +25,52 @@ This is my solution to the [Simmple Monitoring project](https://roadmap.sh/proje
 ## Prerequisites
 
 - Linux OS (AlamLinux 9.5 Minimal)
+- `tar` package
 
 ## How To Use
+
+0. Clone the repository
+```bash
+git clone https://github.com/torshin5ergey/roadmapsh-log-archive-tool
+cd roadmapsh-log-archive-tool
+```
+1. Ensure the `log-archive.sh` script is executable
+```bash
+chmod +x log-archive.sh
+```
+2. Run the script
+```bash
+./log-archive.sh
+```
+
+### Usage
+
+```
+Usage:
+  log-archive [-h] SOURCE [TARGET_DIR]
+
+Arguments:
+  SOURCE       source file/directory to archive
+
+Optional arguments:
+  TARGET_DIR   target directory for archive (default: current directory)
+  -h, --help   show this help message and exit
+```
+
+### Examples
+
+- Archive the `logs` directory to the current directory
+```bash
+log-archive logs
+```
+- Archive the `logs` directory to the `/backups` directory
+```bash
+log-archive logs /backups
+```
+- Show the help message
+```bash
+log-archive -h
+```
 
 ## Author
 
